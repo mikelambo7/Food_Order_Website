@@ -866,14 +866,86 @@ section{
 .leaf.right{
     bottom: 0;
     right: 5%;
-    transform: rotateY(180deg) rotate(50deg);
+    transform: rotateY(180deg) rotate(20deg);
 }
 
 .phone-mockup{
     position: absolute;
     height: 100%;
     left: 50%;
-    transform: translateX(-50%) scale(1.1) rotate(5deg);
+    transform: translateX(-50%) scale(1.1) rotate(-5deg);
     box-shadow: 0 2.5rem 6.25rem var(--phone-app-shadow);
     border-radius: 2rem;
+}
+
+/* discount banner */
+
+.discount-banner{
+    position: relative;
+    display: flex;
+    margin: 0 10vw 5rem;
+    padding: 4rem;
+    border-radius: .5rem;
+    background-image: var(--discount-banner-background-overlay), url(img/discount.png);
+    background-size: cover;
+    color: var(--light-text-color);
+    overflow: hidden;
+}
+
+.discount-banner .section-detail{
+    margin-left: 0;
+    width: 50%;
+}
+
+.discount-banner .section-title{
+    font-size: 3rem;
+    font-weight: 400;
+    margin-top: 0;
+}
+
+.discount-banner .section-info{
+    font-weight: 700;
+}
+
+.discount-code{
+    color: var(--secondary-text-color);
+    padding: 1rem 2rem;
+    background: var(--primary-color);
+    border-radius: .25rem;
+    width: fit-content;
+}
+
+.dish-slide{
+    position: absolute;
+    top: 50%;
+    right: -17.5rem;
+    transform: translateY(-50%);
+    width: 35rem;
+    height: 35rem;
+    border-radius: 100%;
+    transform-origin: center;
+    transition: .75s ease-in-out;
+}
+
+.dish-slide img{
+    width: 15rem;
+    height: 15rem;
+    object-fit: cover;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.dish-slide img:nth-child(1){
+    top: 50%;
+    left: -7.5rem;
+}
+
+.dish-slide img:nth-child(2){
+    top: 10%;
+    right: 2rem;
+}
+
+.dish-slide img:nth-child(3){
+    top: 90%;
+    right: 2rem;
 }
