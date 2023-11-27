@@ -37,3 +37,15 @@ faqs.map(faq => {
         faq.classList.toggle('active');
     })
 })
+
+// dish slider
+
+let dishSlider = document.querySelector('.dish-slide');
+
+let rotationVal = 0;
+
+setInterval(() => {
+    rotationVal += 120;
+
+    dishSlider.style.transform = `translateY(-50%) rotate(${rotationVal}deg)`;
+}, 3000)
