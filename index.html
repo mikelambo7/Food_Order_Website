@@ -14,6 +14,10 @@
 
 <!--    font awesome cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!--    AOS CDN-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 <!--    Style-->
     <link rel="stylesheet" href="style.css">
 
@@ -42,6 +46,12 @@
 
 <!--                card btn-->
                 <a href="#" class="cart"><i class="fa-solid fa-cart-shopping"></i></a>
+
+                <div class="nav-toggler">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </nav>
 
@@ -65,19 +75,19 @@
 
 <!--            hero image container-->
             <div class="hero-img-container">
-                <div class="background-ele">
+                <div class="background-ele" data-aos="fade-in" data-aos-delay="700">
                     <div class="ellipse"></div>
                     <div class="ellipse"></div>
                     <div class="ellipse"></div>
                 </div>
                 <div class="forground-elements">
-                    <img src="img/hero-biryani.png" class="hero-img" alt="">
-                    <img src="img/hero-burger.png" class="hero-img" alt="">
-                    <img src="img/hero-pizza.png" class="hero-img" alt="">
+                    <img src="img/hero-biryani.png" data-aos="zoom-in" data-aos-delay="0" class="hero-img" alt="">
+                    <img src="img/hero-burger.png" data-aos="zoom-in" data-aos-delay="150" class="hero-img" alt="">
+                    <img src="img/hero-pizza.png" data-aos="zoom-in" data-aos-delay="300" class="hero-img" alt="">
                 </div>
 
-                <div class="review-box">
-                    <div class="reviewer-info">
+                <div class="review-box" data-aos="zoom-in" data-aos-delay="450">
+                    <div class="reviewer-info" data-aos="zoom-out" data-aos-delay="600">
                         <img src="img/user-1.png" class="reviewer-img" alt="">
 
                         <div class="reviewer">
@@ -92,7 +102,7 @@
                             <h2 class="reviewer-name">Arik</h2>
                         </div>
                     </div>
-                    <div class="review-body">
+                    <div class="review-body" data-aos="zoom-out" data-aos-delay="650">
                         <i class="fa-solid fa-quote-left"></i>
                         <p class="review">The restaurant was good. Staff was very welcoming and the food.... well no words for it. Chef was amazing and the view of sky from the top deck was fabulous.</p>
                     </div>
@@ -529,6 +539,7 @@
 
     </section>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="app.js"></script>
 </body>
 

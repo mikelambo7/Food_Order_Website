@@ -1,3 +1,14 @@
+// nav toggler
+
+let navToggler = document.querySelector('.nav-toggler');
+let linksContainer = document.querySelector('.links-container');
+
+navToggler.addEventListener('click', () => {
+    navToggler.classList.toggle('active');
+    linksContainer.classList.toggle('active');
+})
+
+
 //about us review slider
 
 let reviews = document.querySelectorAll('.review-wrapper');
@@ -49,3 +60,5 @@ setInterval(() => {
 
     dishSlider.style.transform = `translateY(-50%) rotate(${rotationVal}deg)`;
 }, 3000)
+
+AOS.init();
