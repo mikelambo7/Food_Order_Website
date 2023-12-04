@@ -701,6 +701,7 @@ section{
     position: absolute;
     display: flex;
     gap: 1rem;
+    transform: translateX(1rem) scale(0);
 }
 
 .review-wrapper .review-box{
@@ -882,7 +883,7 @@ section{
     position: absolute;
     height: 100%;
     left: 50%;
-    transform: translateX(-50%) scale(1.1) rotate(-5deg);
+    transform: translateX(-50%) scale(1.1) rotate(0);
     box-shadow: 0 2.5rem 6.25rem var(--phone-app-shadow);
     border-radius: 2rem;
 }
@@ -1483,5 +1484,66 @@ section{
 
     .restaurants-container, .services-container{
         grid-template-columns: 1fr;
+    }
+}
+
+/* animation */
+.food-img-animation-wrapper{
+    transform: none !important;
+}
+
+.food-img-animation-wrapper.aos-animate .food-img{
+    animation: fade-in .5s forwards 1;
+}
+
+@keyframes fade-in{
+    to {
+        opacity: 1;
+    }
+}
+
+.about-us-review-container.aos-animate .review-wrapper{
+    animation: zoom-in-up .5s var(--aos-delay) forwards 1;
+}
+
+@keyframes zoom-in-up{
+    from {
+       transform: translateX(1rem) scale(0);
+    }
+    to{
+       transform: translateX(0) scale(1);
+    }
+}
+
+.circle.pulse-animate{
+    animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse{
+    0%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0);
+    }
+    75%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.9);
+    }
+}
+
+.phone-mockup.aos-animate{
+    animation: fade-rotate .5s forwards;
+}
+
+@keyframes fade-rotate{
+    from{
+        opacity: 0;
+        transform: translateX(-50%) scale(1.1) rotate(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(-50%) scale(1.1) rotate(-5deg);
     }
 }
